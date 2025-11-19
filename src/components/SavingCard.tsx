@@ -1,5 +1,6 @@
 import { Eye, EyeOff, Send, Wallet } from "lucide-react";
 import React, { useState } from "react";
+import ActiveMenuIndicator from "./Reusable/ActiveMenuIndicator";
 
 export default function SavingsCard({ savings }: { savings?: string }) {
   const [hidden, setHidden] = useState(false);
@@ -13,13 +14,13 @@ export default function SavingsCard({ savings }: { savings?: string }) {
       </div>
 
       <div className="bg-white rounded-3xl shadow-2xl pt-4">
-        <h4 className="text-center text-sm font-semibold mt-2 text-[--primary-color]">
+        <h4 className="text-center text-sm font-semibold mt-2 text-[var(--primary-color)]">
           Balance
         </h4>
 
         {/* Balance Display */}
         <div className="flex items-center justify-center gap-3 mt-3">
-          <div className="font-extrabold text-5xl text-[--primary-color]">
+          <div className="font-extrabold text-5xl text-[var(--primary-color)]">
             {hidden ? "••••••" : balanceText}
           </div>
 
@@ -29,26 +30,29 @@ export default function SavingsCard({ savings }: { savings?: string }) {
             onClick={() => setHidden((h) => !h)}
           >
             {hidden ? (
-              <Eye size={24} className="text-[--primary-color]" />
+              <Eye size={24} className="text-[var(--primary-color)]" />
             ) : (
-              <EyeOff size={24} className="text-[--primary-color]" />
+              <EyeOff size={24} className="text-[var(--primary-color)]" />
             )}
           </button>
         </div>
 
         {/* Info Row */}
-        <div className="flex justify-evenly text-sm mt-5 px-4 text--[-gray-light]">
-          <div>
+        <div className="flex justify-evenly text-sm mt-5 p-2 text-[var(--gray-light)]">
+          <span>
             Frequency:{" "}
-            <span className="font-semibold text-[--gray-text]">Monthly</span>
-          </div>
-          <div>
+            <span className="font-semibold text-[var(--gray-text)]">
+              Monthly
+            </span>
+          </span>
+          <div className="h-4 w-px bg-gray-200" />
+          <span>
             AutoSave amount:
             <span className="font-semibold text-[var(--gray-text)]">
               {" "}
               UGX 1,000
             </span>
-          </div>
+          </span>
         </div>
 
         <div className="border-t border-gray-100 my-5" />
@@ -79,6 +83,9 @@ export default function SavingsCard({ savings }: { savings?: string }) {
           </button>
         </div>
       </div>
+
+      {/* Bottom Ribbon three o*/}
+      <ActiveMenuIndicator activeIndex={0} />
     </section>
   );
 }

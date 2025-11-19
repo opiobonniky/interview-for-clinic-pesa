@@ -9,7 +9,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="max-w-md mx-auto min-h-screen flex flex-col bg-gray-100">
+    <div className="mx-auto min-h-screen flex flex-col bg-gray-100 lg:max-w-2xl lg:h-screen">
       <Header appName="clinicPesa" greetingName="Boniface" />
 
       <div className="px-4 shadow-lg bg-white h-auto">
@@ -19,7 +19,7 @@ export default function App() {
 
       <ActionGrid activeTab={activeTab} />
 
-      <footer className="text-center py-6 text-sm">
+      <footer className="bg-gray-100 text-center py-6 text-sm mt-auto">
         <span className="font-medium">clinicPesa</span>{" "}
         <a
           href="#"
