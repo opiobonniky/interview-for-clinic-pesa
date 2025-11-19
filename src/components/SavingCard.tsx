@@ -14,12 +14,12 @@ export default function SavingsCard({ savings }: { savings?: string }) {
       </div>
 
       <div className="bg-white rounded-3xl shadow-2xl pt-4">
-        <h4 className="text-center text-sm font-semibold mt-2 text-[var(--primary-color)]">
+        <h4 className="text-center text-lg font-extrabold mt-2 text-[--primary-color]">
           Balance
         </h4>
 
         {/* Balance Display */}
-        <div className="flex items-center justify-center gap-3 mt-3">
+        <div className="flex items-center justify-center gap-3 mt-1">
           <div className="font-extrabold text-5xl text-[var(--primary-color)]">
             {hidden ? "••••••" : balanceText}
           </div>
