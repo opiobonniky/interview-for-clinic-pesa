@@ -9,7 +9,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="mx-auto min-h-screen flex flex-col bg-gray-100 lg:max-w-2xl lg:h-screen">
+    <div className="mx-auto min-h-screen flex flex-col bg-gray-100 lg:max-w-4xl lg:h-screen">
       <Header appName="clinicPesa" greetingName="Boniface" />
 
       <div className="px-4 shadow-lg bg-white h-auto">
@@ -23,7 +23,7 @@ export default function App() {
         <span className="font-medium">clinicPesa</span>{" "}
         <a
           href="#"
-          className="font-semibold underline text-[--primary-color] px-1 rounded-md"
+          className="font-semibold text-[--primary-color] px-1 rounded-md no-underline"
         >
           T&Cs
         </a>{" "}
