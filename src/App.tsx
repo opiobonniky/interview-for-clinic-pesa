@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Tabs from "./components/Tabs";
+import ActionGrid from "./components/ActionGrid";
+import SavingsCard from "./components/SavingCard";
 
-function App() {
+export default function App() {
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+    <div className="max-w-md mx-auto min-h-screen flex flex-col bg-gray-50">
+      <Header appName="clinicPesa" greetingName="Boniface" />
+
+      <div className="px-4 shadow-lg bg-white h-auto">
+        <SavingsCard savings="Savings"/> 
+        <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      </div>
+
+      <ActionGrid activeTab={activeTab} />
+
+      <footer className="text-center py-6 text-sm" style={{ color: "#737373" }}>
+        <span className="font-medium" style={{ color: "#004465" }}>
+          clinicPesa
+        </span>{" "}
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#"
+          className="font-semibold underline"
+          style={{ color: "#004465" }}
         >
-          Learn React
-        </a>
-      </header>
+          T&Cs
+        </a>{" "}
+        apply.
+      </footer>
     </div>
   );
 }
-
-export default App;
