@@ -27,11 +27,11 @@ function ActionGrid({ activeTab }: { activeTab: number }) {
     },
   ];
 
-  //  If activeTab is NOT 0  → show placeholder box for this interview
+  //  If activeTab is NOT 0 → show placeholder box for this interview
   if (activeTab !== 0) {
     return (
       <section className="mt-6 px-4 pb-6">
-        <div className="bg-white rounded-2xl p-6 entertainment-center justify-center gap-3 shadow-md min-h-[160px] text-center">
+        <div className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center gap-3 shadow-md min-h-[160px] text-center">
           <div className="text-lg font-semibold" style={{ color: "#004465" }}>
             Coming Soon After Interview
           </div>
@@ -43,9 +43,9 @@ function ActionGrid({ activeTab }: { activeTab: number }) {
     );
   }
 
-  // Default visible card grid
+  // Default visible card grid (always 2 columns)
   return (
-    <section className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-gray-100 px-4 pb-6">
+    <section className="mt-6 grid grid-cols-2 gap-4 bg-gray-100 px-4 pb-6">
       {accountCards.map((c) => (
         <button
           key={c.title}

@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowLeft, X } from "lucide-react";
 
 type Props = {
   appName: string;
@@ -7,31 +8,20 @@ type Props = {
 
 export default function Header({ appName, greetingName }: Props) {
   return (
-    <header
-      className="pt-6 pb-12 md:pt-10 md:pb-16 px-4 flex items-center justify-between text-white"
-      style={{ backgroundColor: "#004465" }}
-    >
+    <header className="pt-6 pb-12 md:pt-10 md:pb-16 px-4 flex items-center justify-between text-white bg-[var(--primary-color)]">
+      {/* Back Button */}
       <button
         aria-label="back"
         className="p-2 hover:opacity-80 transition-opacity"
       >
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M15 18L9 12l6-6"
-            stroke="#ffcb05"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <ArrowLeft
+          size={22}
+          strokeWidth={2}
+          className="text-[var(--yellow-active)]"
+        />
       </button>
 
+      {/* Center Text */}
       <div className="text-center">
         <div className="text-xl font-bold tracking-wide">{appName}</div>
         <div className="text-sm mt-1">
@@ -39,25 +29,12 @@ export default function Header({ appName, greetingName }: Props) {
         </div>
       </div>
 
+      {/* Close / Exit Button */}
       <button
         aria-label="close"
         className="p-2 hover:opacity-80 transition-opacity"
       >
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M18 6L6 18M6 6l12 12"
-            stroke="#ffcb05"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <X size={22} strokeWidth={2} className="text-[var(--yellow-active)]" />
       </button>
     </header>
   );
