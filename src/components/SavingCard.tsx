@@ -41,14 +41,14 @@ export default function SavingsCard({ savings }: { savings?: string }) {
         <div className="flex justify-evenly text-sm mt-5 p-2 text-[var(--gray-light)]">
           <span>
             Frequency:{" "}
-            <span className="font-semibold text-[var(--gray-text)]">
+            <span className="font-semibold text-[var(--gray-text)] whitespace-nowrap">
               Monthly
             </span>
           </span>
           <div className="h-4 w-px bg-gray-200" />
           <span>
             AutoSave amount:
-            <span className="font-semibold text-[var(--gray-text)]">
+            <span className="font-semibold text-[var(--gray-text)] whitespace-nowrap">
               {" "}
               UGX 1,000
             </span>
@@ -58,7 +58,7 @@ export default function SavingsCard({ savings }: { savings?: string }) {
         <div className="border-t border-gray-100 my-5" />
 
         {/* Action Buttons */}
-        <div className="flex items-center justify-center gap-10 px-4 pb-6">
+        <div className="flex items-center justify-center gap-20 px-4 pb-6">
           {/* Deposit */}
           <button className="flex flex-col items-center gap-1 hover:opacity-80 transition-opacity text-[var(--primary-color)]">
             <Wallet
