@@ -8,7 +8,7 @@ type Props = {
 export default function Header({ appName, greetingName }: Props) {
   return (
     <header
-      className="pt-6 pb-12 px-4 flex items-center justify-between text-white"
+      className="pt-6 pb-12 md:pt-10 md:pb-16 px-4 flex items-center justify-between text-white"
       style={{ backgroundColor: "#004465" }}
     >
       <button

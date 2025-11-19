@@ -6,7 +6,7 @@ export default function SavingsCard({ savings }: { savings?: string }) {
   const balanceText = "UGX 50,000";
 
   return (
-    <section className="relative -mt-8 mb-6 z-10">
+    <section className="relative -mt-8 mb-6 z-10 px-2 md:px-6 lg:px-10">
       <div
         className="absolute bg-blue-200 p-1 rounded-br-lg rounded-tl-lg text-sm font-medium z-20"
         style={{ color: "#004465" }}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const tabs = ["ACCOUNT OPTIONS", "INVEST", "TRANSACTIONS"];
 
