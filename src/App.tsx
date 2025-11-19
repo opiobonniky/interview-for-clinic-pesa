@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Tabs from "./components/Tabs";
@@ -8,7 +9,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="max-w-md mx-auto min-h-screen flex flex-col bg-gray-50">
+    <div className="max-w-md mx-auto min-h-screen flex flex-col bg-gray-100">
       <Header appName="clinicPesa" greetingName="Boniface" />
 
       <div className="px-4 shadow-lg bg-white h-auto">
@@ -22,7 +23,7 @@ export default function App() {
         <span className="font-medium">clinicPesa</span>{" "}
         <a
           href="#"
-          className="font-semibold underline text-[--primary-color] text-white px-1 rounded-md"
+          className="font-semibold underline text-[--primary-color] px-1 rounded-md"
         >
           T&Cs
         </a>{" "}
