@@ -13,13 +13,13 @@ export default function SavingsCard({ savings }: { savings?: string }) {
       </div>
 
       <div className="bg-white rounded-3xl shadow-2xl pt-4">
-        <h4 className="text-center text-sm font-semibold mt-2 text-[var(--primary-color)]">
+        <h4 className="text-center text-sm font-semibold mt-2 text-[--primary-color]">
           Balance
         </h4>
 
         {/* Balance Display */}
         <div className="flex items-center justify-center gap-3 mt-3">
-          <div className="font-extrabold text-5xl text-[var(--primary-color)]">
+          <div className="font-extrabold text-5xl text-[--primary-color]">
             {hidden ? "••••••" : balanceText}
           </div>
 
@@ -29,20 +29,18 @@ export default function SavingsCard({ savings }: { savings?: string }) {
             onClick={() => setHidden((h) => !h)}
           >
             {hidden ? (
-              <Eye size={24} className="text-[var(--primary-color)]" />
+              <Eye size={24} className="text-[--primary-color]" />
             ) : (
-              <EyeOff size={24} className="text-[var(--primary-color)]" />
+              <EyeOff size={24} className="text-[--primary-color]" />
             )}
           </button>
         </div>
 
         {/* Info Row */}
-        <div className="flex justify-evenly text-sm mt-5 px-4 text-[var(--gray-light)]">
+        <div className="flex justify-evenly text-sm mt-5 px-4 text--[-gray-light]">
           <div>
             Frequency:{" "}
-            <span className="font-semibold text-[var(--gray-text)]">
-              Monthly
-            </span>
+            <span className="font-semibold text-[--gray-text]">Monthly</span>
           </div>
           <div>
             AutoSave amount:
