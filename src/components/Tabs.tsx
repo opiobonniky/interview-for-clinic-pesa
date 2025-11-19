@@ -45,8 +45,8 @@ export default function Tabs({ activeTab, setActiveTab, tabs = [] }: prop) {
           <button
             key={t}
             onClick={() => setActiveTab(i)}
-            className={`flex-shrink-0 w-1/3 font-bold pb-3 relative transition-colors whitespace-nowrap ${
-              i === activeTab ? "text-[--primary-color]" : "text-[--gray-text]"
+            className={`flex-shrink-0 w-1/3 font-bold pb-3 relative transition-colors uppercase whitespace-nowrap ${
+              i === activeTab ? "text-[--primary-color]" : "text-[--gray-text] "
             }`}
           >
             {t}
