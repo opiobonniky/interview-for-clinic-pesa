@@ -8,13 +8,15 @@ import SavingsCard from "./components/SavingCard";
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
 
+  const tabs = ["ACCOUNT OPTIONS", "INVEST", "TRANSACTIONS", "test 1", "test 2"];
+
   return (
-    <div className="mx-auto min-h-screen flex flex-col bg-gray-100 lg:max-w-4xl lg:h-screen">
+    <div className="mx-auto min-h-screen flex flex-col bg-gray-100 lg:max-w-2xl lg:h-screen">
       <Header appName="clinicPesa" greetingName="Boniface" />
 
-      <div className="px-4 shadow-lg bg-white h-auto">
+      <div className="px-4 shadow-md bg-white h-auto">
         <SavingsCard savings="savings" />
-        <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Tabs activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabs} />
       </div>
 
       <ActionGrid activeTab={activeTab} />

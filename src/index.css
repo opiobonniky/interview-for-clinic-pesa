@@ -22,3 +22,12 @@ code {
   --gray-text: #646464;
   --gray-light: #737373;
 }
+
+/* Tailwind-compatible or global CSS */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
